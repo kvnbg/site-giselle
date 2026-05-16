@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Neuropsicologia Clínica, avaliação neuropsicológica e psicodiagnóstico com atendimento ético e acolhedor. Solicite um orçamento pelo WhatsApp." />
-  <meta name="theme-color" content="#0f766e" />
+  <meta name="theme-color" content="#2c44a6" />
   <title>Giselle Torres · Neuropsicóloga Clínica</title>
 
   <!-- Tailwind CSS via CDN oficial -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Configuração de tema: paleta voltada para saúde mental (verde-salvia + teal).
+    // Configuração de tema: paleta voltada para saúde mental (verde-salvia + azul royal).
     tailwind.config = {
       theme: {
         extend: {
@@ -26,6 +26,19 @@
               700: '#39543d',
               800: '#304434',
               900: '#28382c',
+            },
+            // Cor principal do site — azul royal.
+            royal: {
+              50:  '#eef2ff',
+              100: '#dde4fc',
+              200: '#c2cdf8',
+              300: '#9aabf0',
+              400: '#6e84e6',
+              500: '#4169e1',
+              600: '#3454cb',
+              700: '#2c44a6',
+              800: '#293c85',
+              900: '#26356a',
             },
           },
           fontFamily: {
@@ -53,15 +66,15 @@
       transition: opacity .2s ease, transform .2s ease;
     }
     .service-card.is-selected {
-      border-color: #0f766e;            /* teal-700 */
-      background-color: #f0fdfa;        /* teal-50  */
-      box-shadow: 0 8px 20px -8px rgba(15, 118, 110, .35);
+      border-color: #2c44a6;            /* royal-700 */
+      background-color: #eef2ff;        /* royal-50  */
+      box-shadow: 0 8px 20px -8px rgba(44, 68, 166, .35);
     }
     .service-card.is-selected .check-icon {
       opacity: 1;
       transform: scale(1);
     }
-    .service-card.is-selected .card-title { color: #0f766e; }
+    .service-card.is-selected .card-title { color: #2c44a6; }
 
     /* Respeita usuários que preferem menos movimento */
     @media (prefers-reduced-motion: reduce) {
@@ -77,7 +90,7 @@
   <header class="sticky top-0 z-30 border-b border-sage-100 bg-slate-50/90 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5">
       <a href="#topo" class="flex items-center gap-2.5" aria-label="Início">
-        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-teal-700 text-white" aria-hidden="true">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-royal-700 text-white" aria-hidden="true">
           <!-- Ícone: folha / cuidado -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
@@ -90,7 +103,7 @@
         </span>
       </a>
       <a href="#orcamento"
-         class="rounded-xl bg-teal-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-800 active:scale-95">
+         class="rounded-xl bg-royal-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-royal-800 active:scale-95">
         Solicitar orçamento
       </a>
     </div>
@@ -103,7 +116,7 @@
       <!-- Camada decorativa de fundo -->
       <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         <div class="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-sage-100 blur-3xl"></div>
-        <div class="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-teal-100/70 blur-3xl"></div>
+        <div class="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-royal-100/70 blur-3xl"></div>
       </div>
 
       <div class="mx-auto max-w-6xl px-5 py-16 sm:py-24">
@@ -111,13 +124,13 @@
           <!-- Texto -->
           <div>
             <span class="inline-flex items-center gap-2 rounded-full bg-sage-100 px-3 py-1 text-xs font-semibold text-sage-700">
-              <span class="h-2 w-2 rounded-full bg-teal-600" aria-hidden="true"></span>
+              <span class="h-2 w-2 rounded-full bg-royal-600" aria-hidden="true"></span>
               Atendimento online e presencial
             </span>
 
             <h1 class="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-sage-900 sm:text-5xl">
               Um espaço seguro para
-              <span class="text-teal-700">cuidar da sua saúde mental</span>
+              <span class="text-royal-700">cuidar da sua saúde mental</span>
               e reencontrar o equilíbrio.
             </h1>
 
@@ -130,7 +143,7 @@
 
             <div class="mt-8 flex flex-wrap items-center gap-3">
               <a href="#orcamento"
-                 class="inline-flex items-center gap-2 rounded-xl bg-teal-700 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-teal-700/20 transition hover:bg-teal-800 active:scale-95">
+                 class="inline-flex items-center gap-2 rounded-xl bg-royal-700 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-royal-700/20 transition hover:bg-royal-800 active:scale-95">
                 Montar meu orçamento
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M5 12h14M13 5l7 7-7 7" />
@@ -144,11 +157,11 @@
 
             <dl class="mt-10 grid max-w-xs grid-cols-2 gap-4">
               <div>
-                <dt class="text-2xl font-extrabold text-teal-700">100%</dt>
+                <dt class="text-2xl font-extrabold text-royal-700">100%</dt>
                 <dd class="text-xs text-sage-500">sigilo ético garantido</dd>
               </div>
               <div>
-                <dt class="text-2xl font-extrabold text-teal-700">Neuro</dt>
+                <dt class="text-2xl font-extrabold text-royal-700">Neuro</dt>
                 <dd class="text-xs text-sage-500">especialista em Neuropsicologia</dd>
               </div>
             </dl>
@@ -166,7 +179,7 @@
             </div>
             <!-- Selo flutuante -->
             <div class="absolute -bottom-5 left-5 flex items-center gap-3 rounded-xl border border-sage-100 bg-white px-4 py-3 shadow-lg">
-              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-50 text-teal-700" aria-hidden="true">
+              <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-royal-50 text-royal-700" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M9 12l2 2 4-4" />
                   <circle cx="12" cy="12" r="10" />
@@ -186,7 +199,7 @@
     <section id="orcamento" class="scroll-mt-20 py-16 sm:py-24">
       <div class="mx-auto max-w-5xl px-5">
         <div class="mx-auto max-w-2xl text-center">
-          <span class="text-sm font-semibold uppercase tracking-wide text-teal-700">Monte seu atendimento</span>
+          <span class="text-sm font-semibold uppercase tracking-wide text-royal-700">Monte seu atendimento</span>
           <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-sage-900 sm:text-4xl">
             Selecione a avaliação desejada
           </h2>
@@ -225,7 +238,7 @@
               name="foco"
               rows="2"
               placeholder="Ex.: avaliação de memória, atenção, suspeita de TDAH, dificuldade de aprendizagem..."
-              class="w-full resize-y rounded-xl border border-sage-200 bg-slate-50 px-4 py-3 text-base text-sage-900 placeholder:text-sage-400 transition focus:border-teal-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30"></textarea>
+              class="w-full resize-y rounded-xl border border-sage-200 bg-slate-50 px-4 py-3 text-base text-sage-900 placeholder:text-sage-400 transition focus:border-royal-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-royal-600/30"></textarea>
           </div>
 
           <!-- 2) Formulário de identificação -->
@@ -240,12 +253,12 @@
               aria-required="true"
               autocomplete="given-name"
               placeholder="Digite seu nome ou apelido"
-              class="w-full rounded-xl border border-sage-200 bg-slate-50 px-4 py-3 text-base text-sage-900 placeholder:text-sage-400 transition focus:border-teal-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30" />
+              class="w-full rounded-xl border border-sage-200 bg-slate-50 px-4 py-3 text-base text-sage-900 placeholder:text-sage-400 transition focus:border-royal-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-royal-600/30" />
           </div>
 
           <!-- 3) Aviso de privacidade + botão de envio -->
           <p class="mt-5 flex items-start gap-2 text-xs leading-relaxed text-sage-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 flex-shrink-0 text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 flex-shrink-0 text-royal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
             </svg>
             <span>
@@ -261,7 +274,7 @@
             id="botao-whatsapp"
             disabled
             aria-disabled="true"
-            class="mt-4 flex w-full items-center justify-center gap-2.5 rounded-xl bg-teal-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-teal-700/20 transition hover:bg-teal-800 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:hover:bg-teal-700 disabled:active:scale-100">
+            class="mt-4 flex w-full items-center justify-center gap-2.5 rounded-xl bg-royal-700 px-6 py-4 text-base font-bold text-white shadow-lg shadow-royal-700/20 transition hover:bg-royal-800 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:hover:bg-royal-700 disabled:active:scale-100">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.512 5.26l-.999 3.648 3.737-.945zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
             </svg>
@@ -278,13 +291,13 @@
     <!-- ================= SOBRE A PROFISSIONAL ================= -->
     <section id="sobre" class="scroll-mt-20 bg-white py-16 sm:py-24">
       <div class="mx-auto max-w-3xl px-5 text-center">
-        <span class="text-sm font-semibold uppercase tracking-wide text-teal-700">Sobre a profissional</span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-royal-700">Sobre a profissional</span>
         <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-sage-900 sm:text-4xl">
           Giselle Torres
         </h2>
 
         <!-- CRP em destaque (requisito ético) -->
-        <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-sm font-bold text-teal-700">
+        <p class="mt-3 inline-flex items-center gap-2 rounded-full bg-royal-50 px-4 py-1.5 text-sm font-bold text-royal-700">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M9 12l2 2 4-4" />
             <circle cx="12" cy="12" r="10" />
@@ -308,25 +321,25 @@
 
         <ul class="mx-auto mt-8 grid max-w-xl gap-3 text-left sm:grid-cols-2">
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
-            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-royal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
             Investigação de memória e atenção
           </li>
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
-            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-royal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
             Funções executivas e raciocínio
           </li>
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
-            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-royal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
             Apoio ao diagnóstico de TDAH e TEA
           </li>
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
-            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-royal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
             Laudo e devolutiva detalhada
@@ -339,7 +352,7 @@
     <section id="como-funciona" class="scroll-mt-20 py-16 sm:py-24">
       <div class="mx-auto max-w-6xl px-5">
         <div class="mx-auto max-w-2xl text-center">
-          <span class="text-sm font-semibold uppercase tracking-wide text-teal-700">Como funciona</span>
+          <span class="text-sm font-semibold uppercase tracking-wide text-royal-700">Como funciona</span>
           <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-sage-900 sm:text-4xl">
             Atendimento simples e flexível
           </h2>
@@ -351,7 +364,7 @@
         <div class="mt-12 grid gap-6 sm:grid-cols-3">
           <!-- Card 1: Online -->
           <article class="rounded-2xl border border-sage-100 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700" aria-hidden="true">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-royal-50 text-royal-700" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" />
                 <path d="M8 21h8M12 17v4" />
@@ -367,7 +380,7 @@
 
           <!-- Card 2: Presencial -->
           <article class="rounded-2xl border border-sage-100 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700" aria-hidden="true">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-royal-50 text-royal-700" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
@@ -381,7 +394,7 @@
             <address class="mt-3 not-italic">
               <a href="https://www.google.com/maps/search/?api=1&query=R.%20Monsenhor%20Bruno%2C%201153%20-%20Aldeota%2C%20Fortaleza%20-%20CE%2C%2060115-191"
                  target="_blank" rel="noopener noreferrer"
-                 class="flex items-start gap-2 rounded-lg text-sm font-medium text-teal-700 transition hover:text-teal-800 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/40">
+                 class="flex items-start gap-2 rounded-lg text-sm font-medium text-royal-700 transition hover:text-royal-800 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-royal-600/40">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-4 w-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                   <circle cx="12" cy="10" r="3" />
@@ -393,7 +406,7 @@
 
           <!-- Card 3: Etapas da avaliação -->
           <article class="rounded-2xl border border-sage-100 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700" aria-hidden="true">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-royal-50 text-royal-700" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3" />
                 <rect x="8" y="2" width="8" height="4" rx="1" />
@@ -420,7 +433,7 @@
       <div class="flex flex-col items-start justify-between gap-8 sm:flex-row">
         <div>
           <div class="flex items-center gap-2.5">
-            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-teal-600 text-white" aria-hidden="true">
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-royal-600 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
                 <path d="M2 21c0-3 1.85-5.36 5.08-6" />
@@ -514,18 +527,18 @@
         return `
           <button
             type="button"
-            class="service-card group flex min-h-[150px] flex-col rounded-xl border-2 border-sage-200 bg-white p-3 text-left transition duration-150 hover:border-teal-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600/40 active:scale-95 sm:min-h-[170px] sm:p-4"
+            class="service-card group flex min-h-[150px] flex-col rounded-xl border-2 border-sage-200 bg-white p-3 text-left transition duration-150 hover:border-royal-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-royal-600/40 active:scale-95 sm:min-h-[170px] sm:p-4"
             data-id="${servico.id}"
             aria-pressed="false">
             <span class="mb-2 flex items-center justify-between">
-              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-sage-100 text-teal-700" aria-hidden="true">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-sage-100 text-royal-700" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
                   <path d="M2 21c0-3 1.85-5.36 5.08-6" />
                 </svg>
               </span>
               <!-- Ícone de "check" exibido quando o card está selecionado -->
-              <span class="check-icon flex h-6 w-6 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
+              <span class="check-icon flex h-6 w-6 items-center justify-center rounded-full bg-royal-700 text-white" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
