@@ -188,10 +188,10 @@
         <div class="mx-auto max-w-2xl text-center">
           <span class="text-sm font-semibold uppercase tracking-wide text-teal-700">Monte seu atendimento</span>
           <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-sage-900 sm:text-4xl">
-            Selecione os serviços desejados
+            Selecione a avaliação desejada
           </h2>
           <p class="mt-3 text-base text-sage-600">
-            Toque nos serviços de interesse, informe seu nome e receba um
+            Escolha a avaliação de interesse, informe seu nome e receba um
             orçamento personalizado diretamente no WhatsApp.
           </p>
         </div>
@@ -201,9 +201,9 @@
 
           <!-- 1) Cards de serviços (renderizados via JavaScript) -->
           <div class="mb-3 flex items-center justify-between">
-            <h3 class="text-sm font-semibold text-sage-700">1. Escolha os serviços</h3>
+            <h3 class="text-sm font-semibold text-sage-700">1. Escolha a avaliação</h3>
             <span id="contador-selecao" class="text-xs font-medium text-sage-500" aria-live="polite">
-              Nenhum serviço selecionado
+              Nenhuma avaliação selecionada
             </span>
           </div>
 
@@ -211,7 +211,7 @@
           <div id="lista-servicos"
                class="grid grid-cols-2 gap-3 sm:gap-4"
                role="group"
-               aria-label="Lista de serviços disponíveis para orçamento">
+               aria-label="Avaliações disponíveis para orçamento">
             <!-- Cards inseridos dinamicamente -->
           </div>
 
@@ -269,7 +269,7 @@
           </button>
 
           <p class="mt-3 text-center text-xs text-sage-400">
-            Selecione ao menos um serviço e informe seu nome para liberar o envio.
+            Selecione uma avaliação e informe seu nome para liberar o envio.
           </p>
         </div>
       </div>
@@ -495,7 +495,7 @@
     /* =========================================================
        2. ESTADO E REFERÊNCIAS DE DOM
        ========================================================= */
-    const servicosSelecionados = new Set();          // ids selecionados
+    const servicosSelecionados = new Set();          // seleção única: 0 ou 1 id
 
     const listaEl     = document.querySelector('#lista-servicos');
     const nomeEl      = document.querySelector('#campo-nome');
@@ -548,16 +548,22 @@
        ========================================================= */
     function alternarServico(cardEl) {
       const id = cardEl.dataset.id;
-      const selecionado = servicosSelecionados.has(id);
+      const jaSelecionado = servicosSelecionados.has(id);
 
-      if (selecionado) {
-        servicosSelecionados.delete(id);
-      } else {
+      // Seleção única: limpa a seleção anterior antes de aplicar a nova.
+      servicosSelecionados.clear();
+      listaEl.querySelectorAll('.service-card').forEach(function (card) {
+        card.classList.remove('is-selected');
+        card.setAttribute('aria-pressed', 'false');
+      });
+
+      // Clicar no card já selecionado apenas o desmarca; caso contrário,
+      // ele passa a ser o único serviço escolhido.
+      if (!jaSelecionado) {
         servicosSelecionados.add(id);
+        cardEl.classList.add('is-selected');
+        cardEl.setAttribute('aria-pressed', 'true');
       }
-
-      cardEl.classList.toggle('is-selected', !selecionado);
-      cardEl.setAttribute('aria-pressed', String(!selecionado));
 
       atualizarContador();
       atualizarBlocoFoco();
@@ -567,16 +573,11 @@
     /* =========================================================
        5. ATUALIZAÇÕES DE INTERFACE
        ========================================================= */
-    // Texto informativo com a quantidade de serviços escolhidos.
+    // Texto informativo sobre a avaliação escolhida (seleção única).
     function atualizarContador() {
-      const total = servicosSelecionados.size;
-      if (total === 0) {
-        contadorEl.textContent = 'Nenhum serviço selecionado';
-      } else if (total === 1) {
-        contadorEl.textContent = '1 serviço selecionado';
-      } else {
-        contadorEl.textContent = total + ' serviços selecionados';
-      }
+      contadorEl.textContent = servicosSelecionados.size > 0
+        ? 'Avaliação selecionada'
+        : 'Nenhuma avaliação selecionada';
     }
 
     // Exibe a caixa de foco apenas quando a Avaliação Específica é escolhida.
@@ -628,7 +629,7 @@
       // Monta o texto final com quebras de linha (\n).
       const linhas = [
         'Olá! Meu nome é ' + nome + '.',
-        'Gostaria de solicitar o orçamento para os seguintes serviços:',
+        'Gostaria de solicitar o orçamento para a seguinte avaliação:',
         ...linhasServicos,
         '',
         'Como funciona o processo e quais são os valores?',
