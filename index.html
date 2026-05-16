@@ -142,11 +142,7 @@
               </a>
             </div>
 
-            <dl class="mt-10 grid max-w-md grid-cols-3 gap-4">
-              <div>
-                <dt class="text-2xl font-extrabold text-teal-700">+10</dt>
-                <dd class="text-xs text-sage-500">anos de experiência</dd>
-              </div>
+            <dl class="mt-10 grid max-w-xs grid-cols-2 gap-4">
               <div>
                 <dt class="text-2xl font-extrabold text-teal-700">100%</dt>
                 <dd class="text-xs text-sage-500">sigilo ético garantido</dd>
@@ -211,12 +207,25 @@
             </span>
           </div>
 
-          <!-- grid-cols-2 obrigatório no mobile; expande no desktop -->
+          <!-- grid-cols-2 obrigatório no mobile -->
           <div id="lista-servicos"
-               class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4"
+               class="grid grid-cols-2 gap-3 sm:gap-4"
                role="group"
                aria-label="Lista de serviços disponíveis para orçamento">
             <!-- Cards inseridos dinamicamente -->
+          </div>
+
+          <!-- Campo condicional: aparece apenas ao escolher a Avaliação Específica -->
+          <div id="bloco-foco" class="mt-4 hidden">
+            <label for="campo-foco" class="mb-1.5 block text-sm font-semibold text-sage-700">
+              Qual o foco da avaliação específica?
+            </label>
+            <textarea
+              id="campo-foco"
+              name="foco"
+              rows="2"
+              placeholder="Ex.: avaliação de memória, atenção, suspeita de TDAH, dificuldade de aprendizagem..."
+              class="w-full resize-y rounded-xl border border-sage-200 bg-slate-50 px-4 py-3 text-base text-sage-900 placeholder:text-sage-400 transition focus:border-teal-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-600/30"></textarea>
           </div>
 
           <!-- 2) Formulário de identificação -->
@@ -284,17 +293,17 @@
         </p>
 
         <p class="mt-6 text-base leading-relaxed text-sage-600">
-          Atuo na área da
-          <strong class="font-semibold text-sage-800">Neuropsicologia Clínica</strong>,
-          com foco em avaliação neuropsicológica e psicodiagnóstico.
-          Investigo funções cognitivas como memória, atenção, linguagem e
-          funções executivas, contribuindo para diagnósticos precisos e
-          para o direcionamento do tratamento.
+          Sou neuropsicóloga clínica dedicada exclusivamente à
+          <strong class="font-semibold text-sage-800">avaliação neuropsicológica</strong>
+          — um processo estruturado e baseado em evidências que investiga
+          funções cognitivas como memória, atenção, linguagem, raciocínio
+          e funções executivas.
         </p>
         <p class="mt-4 text-base leading-relaxed text-sage-600">
-          Acredito em um atendimento sem julgamentos, baseado em evidências
-          científicas e centrado na pessoa. Meu compromisso é com a ética,
-          o sigilo e o cuidado genuíno em cada etapa do processo.
+          A avaliação ajuda a identificar alterações cognitivas, esclarecer
+          hipóteses diagnósticas e orientar tratamentos, intervenções e
+          adaptações. Conduzo todo o processo com ética, sigilo e uma
+          devolutiva clara sobre os resultados.
         </p>
 
         <ul class="mx-auto mt-8 grid max-w-xl gap-3 text-left sm:grid-cols-2">
@@ -302,25 +311,25 @@
             <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
-            Avaliação neuropsicológica
+            Investigação de memória e atenção
           </li>
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
             <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
-            Psicodiagnóstico
+            Funções executivas e raciocínio
           </li>
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
             <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
-            TDAH e dificuldades de aprendizagem
+            Apoio ao diagnóstico de TDAH e TEA
           </li>
           <li class="flex items-center gap-2.5 rounded-xl border border-sage-100 bg-slate-50 px-4 py-3 text-sm font-medium text-sage-700">
             <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-700 text-white" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
             </span>
-            Memória, atenção e linguagem
+            Laudo e devolutiva detalhada
           </li>
         </ul>
       </div>
@@ -463,31 +472,19 @@
        ========================================================= */
     const SERVICOS = [
       {
-        id: 'psico_individual',
-        titulo: 'Psicoterapia Individual',
-        descricao: 'Sessões focadas no autoconhecimento, ansiedade e depressão.',
+        id: 'aval_completa',
+        titulo: 'Avaliação Neuropsicológica Completa',
+        descricao: 'Investigação ampla das funções cognitivas para identificar possíveis alterações e esclarecer um diagnóstico.',
       },
       {
-        id: 'aval_psicologica',
-        titulo: 'Avaliação Psicológica',
-        descricao: 'Processo estruturado com testes para emissão de laudos.',
-      },
-      {
-        id: 'orient_vocacional',
-        titulo: 'Orientação Profissional / Vocacional',
-        descricao: 'Direcionamento para escolha de carreira ou transição.',
-      },
-      {
-        id: 'terapia_casal',
-        titulo: 'Terapia de Casal',
-        descricao: 'Mediação focada em melhorar a comunicação do relacionamento.',
-      },
-      {
-        id: 'palestras_treinos',
-        titulo: 'Palestras e Workshops',
-        descricao: 'Saúde mental corporativa e educacional.',
+        id: 'aval_especifica',
+        titulo: 'Avaliação Neuropsicológica Específica',
+        descricao: 'Avaliação direcionada a uma queixa pontual — ao escolher, você indica o foco desejado.',
       },
     ];
+
+    // ID do serviço que exige a especificação do foco da avaliação.
+    const ID_ESPECIFICA = 'aval_especifica';
 
     // Número do WhatsApp (formato internacional, sem símbolos).
     // >>> Altere para o número real da profissional. <<<
@@ -498,10 +495,12 @@
        ========================================================= */
     const servicosSelecionados = new Set();          // ids selecionados
 
-    const listaEl    = document.querySelector('#lista-servicos');
-    const nomeEl     = document.querySelector('#campo-nome');
-    const botaoEl    = document.querySelector('#botao-whatsapp');
-    const contadorEl = document.querySelector('#contador-selecao');
+    const listaEl     = document.querySelector('#lista-servicos');
+    const nomeEl      = document.querySelector('#campo-nome');
+    const focoEl      = document.querySelector('#campo-foco');
+    const blocoFocoEl = document.querySelector('#bloco-foco');
+    const botaoEl     = document.querySelector('#botao-whatsapp');
+    const contadorEl  = document.querySelector('#contador-selecao');
 
     /* =========================================================
        3. RENDERIZAÇÃO DOS CARDS DE SERVIÇO
@@ -559,6 +558,7 @@
       cardEl.setAttribute('aria-pressed', String(!selecionado));
 
       atualizarContador();
+      atualizarBlocoFoco();
       atualizarEstadoBotao();
     }
 
@@ -577,11 +577,26 @@
       }
     }
 
-    // O botão só é habilitado com >= 1 serviço E nome preenchido.
+    // Exibe a caixa de foco apenas quando a Avaliação Específica é escolhida.
+    function atualizarBlocoFoco() {
+      const ativo = servicosSelecionados.has(ID_ESPECIFICA);
+      const estavaOculto = blocoFocoEl.classList.contains('hidden');
+
+      blocoFocoEl.classList.toggle('hidden', !ativo);
+      focoEl.setAttribute('aria-required', String(ativo));
+
+      // Move o foco para a caixa de texto assim que ela aparece.
+      if (ativo && estavaOculto) focoEl.focus();
+    }
+
+    // O botão é habilitado com >= 1 serviço, nome preenchido e — quando a
+    // Avaliação Específica é escolhida — o foco da avaliação também informado.
     function atualizarEstadoBotao() {
       const temServico = servicosSelecionados.size > 0;
       const temNome = nomeEl.value.trim().length > 0;
-      const habilitado = temServico && temNome;
+      const focoOk = !servicosSelecionados.has(ID_ESPECIFICA)
+        || focoEl.value.trim().length > 0;
+      const habilitado = temServico && temNome && focoOk;
 
       botaoEl.disabled = !habilitado;
       botaoEl.setAttribute('aria-disabled', String(!habilitado));
@@ -598,8 +613,13 @@
         return servicosSelecionados.has(s.id);
       });
 
-      // Lista com negrito no padrão do WhatsApp (*texto*).
+      // Lista com negrito no padrão do WhatsApp (*texto*). Para a Avaliação
+      // Específica, acrescenta o foco informado pela pessoa.
       const linhasServicos = escolhidos.map(function (s) {
+        if (s.id === ID_ESPECIFICA) {
+          const foco = focoEl.value.trim();
+          return '• *' + s.titulo + '*' + (foco ? '\n  Foco: ' + foco : '');
+        }
         return '• *' + s.titulo + '*';
       });
 
@@ -645,6 +665,9 @@
 
       // Revalida o botão sempre que o nome muda.
       nomeEl.addEventListener('input', atualizarEstadoBotao);
+
+      // Revalida o botão quando o foco da avaliação específica muda.
+      focoEl.addEventListener('input', atualizarEstadoBotao);
 
       // Clique no botão de envio.
       botaoEl.addEventListener('click', solicitarOrcamento);
